@@ -1,0 +1,5 @@
+Revision history for Net-Whois-RIS
+
+0.1	Fri Nov  5 11:25:48 CET 2010
+        First version, minimal getOrigin and getDescr working. 
+
