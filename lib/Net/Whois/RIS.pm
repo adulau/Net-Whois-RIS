@@ -65,6 +65,11 @@ sub getDescr {
     return $self->{get}{'descr'};
 }
 
+sub getRoute {
+    my ($self) = @_;
+
+    return $self->{get}{'route'};
+}
 1;    # End of Net::Whois::RIS
 __END__
 
@@ -117,6 +122,10 @@ The method returns a string containing the origin of the network/IP requested.
 =item getDescr();
 
 The method returns a string containing the description of the AS announcing the network/IP requested.
+
+=item getRoute();
+
+The method returns a string containing the last route announced for the requested network/IP address.
 
 =back
 
