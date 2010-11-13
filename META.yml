@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Net-Whois-RIS
-version:            0.1
+version:            0.2
 abstract:           Whois lookup on RIPE RIS 
 author:
     - Alexandre Dulaunoy <adulau@foo.be>

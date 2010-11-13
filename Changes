@@ -1,5 +1,22 @@
 Revision history for Net-Whois-RIS
 
+
+commit 4fbece5f017aff71ffd3af6262ac6e3c2ca7f0e6
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Sat Nov 13 09:13:59 2010 +0100
+
+    Clarified a bit the documentation and the interfaces.
+
+
+commit c13662a2d305dd2668225b03ed80050a63268cd7
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Sun Nov 7 17:00:07 2010 +0100
+
+    getRoute method added: to fetch the last announced
+    route matching the requested IP/network address.
+
+
+
 0.1	Fri Nov  5 11:25:48 CET 2010
         First version, minimal getOrigin and getDescr working. 
 
