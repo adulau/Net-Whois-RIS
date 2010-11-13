@@ -1,6 +1,13 @@
 Revision history for Net-Whois-RIS
 
 
+commit ce137214e17bf7afe80fb7aba9a9d14cf6d5c587
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Sat Nov 13 09:27:42 2010 +0100
+
+    Net::Whois::RIS 0.2
+
+
 commit 4fbece5f017aff71ffd3af6262ac6e3c2ca7f0e6
 Author: Alexandre Dulaunoy <a@foo.be>
 Date:   Sat Nov 13 09:13:59 2010 +0100
