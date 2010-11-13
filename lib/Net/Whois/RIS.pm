@@ -86,7 +86,7 @@ our $VERSION = '0.1';
 
 =head1 SYNOPSIS
 
-The module query the RIPE Routing Information Service (RIS) to get
+The module query the RIPE Routing Information Service (RIS) whois to get
 information about a specific IP address. You can get information
 like the AS number announcing the IP address/network.
     
@@ -96,6 +96,13 @@ like the AS number announcing the IP address/network.
     $foo->getIPInfo("8.8.8.8");
     print $foo->getOrigin();
     print $foo->getDescr();
+
+The module's first objective was to provide an easy IP to ASN
+mapping interface via Perl.
+
+For more information about the RIPE Routing Information Service :
+
+http://www.ripe.net/ris/
 
 =head1 methods 
 
@@ -117,15 +124,15 @@ The method is gathering the information from the RIS service.
 
 =item getOrigin();
 
-The method returns a string containing the origin of the network/IP requested.
+The method returns a string containing the originating ASN of the network/IP requested.
 
 =item getDescr();
 
-The method returns a string containing the description of the AS announcing the network/IP requested.
+The method returns a string containing the description of the ASN announcing the network/IP requested.
 
 =item getRoute();
 
-The method returns a string containing the last route announced for the requested network/IP address.
+The method returns a string containing the most specific route match for the requested network/IP address.
 
 =back
 
