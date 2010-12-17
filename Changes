@@ -1,5 +1,20 @@
 Revision history for Net-Whois-RIS
 
+commit 414351d4e3a78cd4982e8d6c2808f100d24f5e48
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Fri Dec 17 22:34:32 2010 +0100
+
+    Function to get prefixes announced per ASN added
+
+    Expecting to see a way to get the information per ASN
+    via the RIS whois protocol, I discovered this not the case.
+    As the RIPE RIS dashboard is providing the information,
+    the function is relying on the Ajax interface to gather the data.
+    I hope this is an acceptable use of the Ajax interface for RIPE RIS.
+    Maybe RIPE RIS will decide to add the ability to query an ASN
+    directly via the RIS whois later on. The Scrappy perl module is required
+    if you intend to use the function.
+
 
 commit ce137214e17bf7afe80fb7aba9a9d14cf6d5c587
 Author: Alexandre Dulaunoy <a@foo.be>
