@@ -27,6 +27,7 @@ sub new {
     my $self = {};
     bless $self, $class;
     $self->{host} = "ris.ripe.net";
+    $self->{url} = "http://www.ris.ripe.net/mt/mas/ajax.mas?_comp=%2Fmt%2Fmas%2Fdashboards.mas%3AgetPrefixesForASN&as=|ASN|&overview_div_graph_id=prefixes_graph_div&martian_warning_div=martian_ov&tabid=1&overview_div_pie_id=prefixes_pie_div&prefixes_graph_img=prefixes_graph_ov&prefixes_pie_img=prefixes_pie_ov%27";
     return $self;
 
 }
@@ -51,6 +52,34 @@ sub getIPInfo {
     }
     $self->{get} = \%h;
     return $self;
+}
+
+sub getASNInfo {
+
+    my ( $self, $asn) = @_;
+    use Scrappy;
+
+    my $spidy = Scrappy->new;
+    my $url = $self->{url};
+    $self->{prefixes} = "";
+    $url =~ s/\|ASN\|/$asn/;
+
+    $spidy->crawl($url,{
+            'table td a' => sub {
+                        my $data = shift->text;
+                        if (!($data =~ m/W/)) {
+                        $self->{prefixes} = $self->{prefixes}.$data."\n";
+                        }
+            }
+    });
+
+    return $self;
+}
+
+sub getPrefixes {
+    my ($self) = @_;
+
+    return $self->{prefixes};
 }
 
 sub getOrigin {
@@ -79,10 +108,10 @@ Net::Whois::RIS - Whois lookup on RIPE RIS
 
 =head1 VERSION
 
-Version 0.2
+Version 0.3
 
 =cut
-our $VERSION = '0.2';
+our $VERSION = '0.3';
 
 =head1 SYNOPSIS
 
@@ -96,6 +125,16 @@ like the AS number announcing the IP address/network.
     $foo->getIPInfo("8.8.8.8");
     print $foo->getOrigin();
     print $foo->getDescr();
+
+The module can also query the Web interface to gather additional
+information via the Ajax interface of the RIPE RIS dashboard. The
+main use is to gather the list of announced prefixes for an ASN.
+
+    use Net::Whois::RIS;
+
+    my $foo = Net::Whois::RIS->new();
+    $foo->getASNInfo("12684");
+    print $foo->getPrefixes();
 
 The module's first objective was to provide an easy IP to ASN
 mapping interface via Perl.
@@ -120,7 +159,16 @@ request to RIPE RIS.
 
 =item getIPInfo($ipaddress);
 
-The method is gathering the information from the RIS service.
+The method is gathering the information from the RIS service using the whois protocol.
+
+=item getASNInfo($asn);
+
+The method is gathering the prefixes announced via the RIS service Ajax (as the
+whois RIS interface is not providing the service).
+
+=item getPrefixes();
+
+The method returns the list of prefixes announced by an ASN.
 
 =item getOrigin();
 
