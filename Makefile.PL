@@ -13,7 +13,8 @@ WriteMakefile(
     PL_FILES            => {},
     PREREQ_PM => {
         'Test::More' => 0,
-    	'IO::Socket' => 0
+        'IO::Socket' => 0,
+        'Scrappy'    => 0
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'Net-Whois-RIS-*' },
