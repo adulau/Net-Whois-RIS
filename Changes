@@ -1,5 +1,41 @@
 Revision history for Net-Whois-RIS
 
+commit 2a71d66d32504a524cf5f8fbd5ebb50ddc02f6d9
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Sat Jan 1 18:04:21 2011 +0100
+
+    Net::Whois::RIS 0.5
+
+commit fe171295e423ca5622c8fc0bf248a29b0b8fd99b
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Sat Jan 1 17:58:46 2011 +0100
+
+    cleanup and repository reference
+
+commit f11e5726f1a59f3d5cd73742abaec6083fbf7a31
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Mon Dec 20 13:40:02 2010 +0100
+
+    Return undef the AS is not announcing any prefixes
+
+commit fb4de1d587dab70525c3a5f87d197d87ddb2134f
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Sat Dec 18 09:04:25 2010 +0100
+
+    Updated metafile
+
+commit 533363de4a06d45c0af29a2121735799cd6d8105
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Sat Dec 18 08:56:48 2010 +0100
+
+    Scrappy dependency added
+
+commit 1abd1408e998c4fdc1de7159154af2de7ceeb250
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Fri Dec 17 22:49:05 2010 +0100
+
+    Updated ChangeLog for CPAN upload
+
 commit 414351d4e3a78cd4982e8d6c2808f100d24f5e48
 Author: Alexandre Dulaunoy <a@foo.be>
 Date:   Fri Dec 17 22:34:32 2010 +0100
