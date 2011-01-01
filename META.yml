@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Net-Whois-RIS
-version:            0.4
+version:            0.5
 abstract:           Whois lookup on RIPE RIS 
 author:
     - Alexandre Dulaunoy <adulau@foo.be>
@@ -8,15 +8,19 @@ license:            perl
 distribution_type:  module
 configure_requires:
     ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
 requires:
     IO::Socket:  0
     Scrappy:     0
     Test::More:  0
+resources:
+    repository:  https://github.com/adulau/Net-Whois-RIS
 no_index:
     directory:
         - t
         - inc
-generated_by:       ExtUtils::MakeMaker version 6.48
+generated_by:       ExtUtils::MakeMaker version 6.56
 meta-spec:
     url:      http://module-build.sourceforge.net/META-spec-v1.4.html
     version:  1.4
