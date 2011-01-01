@@ -76,8 +76,7 @@ sub getASNInfo {
                     }
                 }
                 else { $self->{prefixes} = undef; }
-              }
-        }
+        }}
     );
 
     return $self;

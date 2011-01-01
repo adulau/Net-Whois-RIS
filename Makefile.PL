@@ -16,6 +16,12 @@ WriteMakefile(
         'IO::Socket' => 0,
         'Scrappy'    => 0
     },
+    META_MERGE => {
+        resources => {
+                            repository => 'https://github.com/adulau/Net-Whois-RIS'
+                     }
+    },
+
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'Net-Whois-RIS-*' },
 );
