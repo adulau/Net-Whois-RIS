@@ -43,6 +43,7 @@ sub getIPInfo {
     while (<$con>) {
         $x = $x . $_;
     }
+    $con->close;
     my %h = ();
     foreach ( split( /\n/, $x ) ) {
         next if (m/^%/);
