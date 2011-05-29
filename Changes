@@ -1,5 +1,17 @@
 Revision history for Net-Whois-RIS
 
+commit ce4464952f5dc00867e5af536f040a9d97839a4b
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Sun May 29 21:36:46 2011 +0200
+
+    Net::Whois::RIS 0.6
+
+commit 40a5dc7c155c82a155296580cecaef2c4c444cca
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Sun May 15 22:39:27 2011 +0200
+
+    Properly close the socket
+
 commit 2a71d66d32504a524cf5f8fbd5ebb50ddc02f6d9
 Author: Alexandre Dulaunoy <a@foo.be>
 Date:   Sat Jan 1 18:04:21 2011 +0100
