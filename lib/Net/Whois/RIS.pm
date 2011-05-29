@@ -111,21 +111,21 @@ __END__
 
 =head1 NAME
 
-Net::Whois::RIS - Whois lookup on RIPE RIS 
+Net::Whois::RIS - Whois lookup on RIPE RIS
 
 =head1 VERSION
 
-Version 0.5
+Version 0.6
 
 =cut
-our $VERSION = '0.5';
+our $VERSION = '0.6';
 
 =head1 SYNOPSIS
 
 The module query the RIPE Routing Information Service (RIS) whois to get
 information about a specific IP address. You can get information
 like the AS number announcing the IP address/network.
-    
+
     use Net::Whois::RIS;
 
     my $foo = Net::Whois::RIS->new();
@@ -150,10 +150,10 @@ For more information about the RIPE Routing Information Service :
 
 http://www.ripe.net/ris/
 
-=head1 methods 
+=head1 methods
 
 The object  oriented interface to C<Net::Whois::RIS> is  described in this
-section.  
+section.
 
 The following methods are provided:
 
