@@ -1,5 +1,26 @@
 Revision history for Net-Whois-RIS
 
+commit 7f3e531f14fddd63e75241d2024588f8c3c53ad7
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Sun Apr 19 20:12:00 2015 +0200
+
+    Default whois server at RIPE fixed.
+
+    RIS whois server moved from ris.ripe.net to riswhois.ripe.net
+
+commit 14c67ff173837246fa6b664442a144dc79651fca
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Sun May 29 21:41:45 2011 +0200
+
+    Cleanup
+
+commit 162b1e98909463b182d509d53815fab014c766b1
+Author: Alexandre Dulaunoy <a@foo.be>
+Date:   Sun May 29 21:40:33 2011 +0200
+
+    Changelog for CPAN updated
+
+
 commit ce4464952f5dc00867e5af536f040a9d97839a4b
 Author: Alexandre Dulaunoy <a@foo.be>
 Date:   Sun May 29 21:36:46 2011 +0200
