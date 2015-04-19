@@ -26,7 +26,7 @@ sub new {
     my $class = ref($this) || $this;
     my $self = {};
     bless $self, $class;
-    $self->{host} = "ris.ripe.net";
+    $self->{host} = "riswhois.ripe.net";
     $self->{url} =
 "http://www.ris.ripe.net/mt/mas/ajax.mas?_comp=%2Fmt%2Fmas%2Fdashboards.mas%3AgetPrefixesForASN&as=|ASN|&overview_div_graph_id=prefixes_graph_div&martian_warning_div=martian_ov&tabid=1&overview_div_pie_id=prefixes_pie_div&prefixes_graph_img=prefixes_graph_ov&prefixes_pie_img=prefixes_pie_ov%27";
     return $self;
@@ -115,10 +115,10 @@ Net::Whois::RIS - Whois lookup on RIPE RIS
 
 =head1 VERSION
 
-Version 0.6
+Version 0.7
 
 =cut
-our $VERSION = '0.6';
+our $VERSION = '0.7';
 
 =head1 SYNOPSIS
 
@@ -237,7 +237,7 @@ L<http://search.cpan.org/dist/Net-Whois-RIS/>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2010 Alexandre Dulaunoy.
+Copyright 2010-2015 Alexandre Dulaunoy.
 
 This program is free software; you can redistribute it and/or modify it
 under the terms of either: the GNU General Public License as published
